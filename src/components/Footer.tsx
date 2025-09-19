@@ -78,7 +78,10 @@ const Footer = () => {
               <Link to="/about" className="block text-muted-foreground hover:text-accent transition-colors text-sm text-left">
                 About Us
               </Link>
-              {companyLinks.slice(1).map((link, index) => (
+              <Link to="/contact" className="block text-muted-foreground hover:text-accent transition-colors text-sm text-left">
+                Contact Us
+              </Link>
+              {companyLinks.slice(2).map((link, index) => (
                 <li key={index}>
                   <button className="text-muted-foreground hover:text-accent transition-colors text-sm text-left">
                     {link}
