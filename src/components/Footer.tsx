@@ -61,13 +61,16 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold text-foreground mb-4">Support</h3>
             <ul className="space-y-2">
-              {supportLinks.slice(0, 3).map((link, index) => (
-                <li key={index}>
-                  <button className="text-muted-foreground hover:text-accent transition-colors text-sm text-left">
-                    {link}
-                  </button>
-                </li>
-              ))}
+              <li>
+                <Link to="/return-policy" className="text-muted-foreground hover:text-accent transition-colors text-sm text-left">
+                  Return & Refund Policy
+                </Link>
+              </li>
+              <li>
+                <Link to="/privacy" className="text-muted-foreground hover:text-accent transition-colors text-sm text-left">
+                  Privacy Policy
+                </Link>
+              </li>
               <li>
                 <Link to="/terms" className="text-muted-foreground hover:text-accent transition-colors text-sm text-left">
                   Terms and Conditions
