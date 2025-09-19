@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import ShopByArts from "@/components/ShopByArts";
 import FeaturedProducts from "@/components/FeaturedProducts";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -14,6 +15,7 @@ const Index = () => {
         <ShopByArts />
         <FeaturedProducts />
       </main>
+      <Footer />
     </div>
   );
 };
