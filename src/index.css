@@ -2,39 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* Hancraft Design System - Artisanal & Handmade Crafts Theme
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
+    /* Base colors */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 220 13% 18%;
 
+    /* Card colors */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 220 13% 18%;
 
+    /* Popover colors */
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 220 13% 18%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Rich Navy Blue */
+    --primary: 220 40% 25%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Warm Gold */
+    --secondary: 45 95% 58%;
+    --secondary-foreground: 220 40% 25%;
 
-    --muted: 210 40% 96.1%;
+    /* Muted tones */
+    --muted: 210 40% 96%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - Warm Amber */
+    --accent: 38 92% 50%;
+    --accent-foreground: 220 40% 25%;
 
+    /* Destructive */
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
+    /* Borders and inputs */
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 38 92% 50%;
+
+    /* Custom Hancraft colors */
+    --craft-warm: 25 85% 60%;
+    --craft-earth: 30 45% 35%;
+    --craft-clay: 20 55% 45%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(220 40% 25%), hsl(220 30% 35%));
+    --gradient-warm: linear-gradient(135deg, hsl(38 92% 50%), hsl(45 95% 58%));
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(210 40% 98%));
+
+    /* Shadows */
+    --shadow-soft: 0 4px 6px -1px hsl(220 40% 25% / 0.1);
+    --shadow-craft: 0 10px 25px -5px hsl(220 40% 25% / 0.2);
+    --shadow-glow: 0 0 20px hsl(38 92% 50% / 0.3);
 
     --radius: 0.5rem;
 
