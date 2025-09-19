@@ -1,6 +1,7 @@
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Instagram, Linkedin, Facebook } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const supportLinks = [
@@ -74,7 +75,10 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold text-foreground mb-4">Company</h3>
             <ul className="space-y-2">
-              {companyLinks.map((link, index) => (
+              <Link to="/about" className="block text-muted-foreground hover:text-accent transition-colors text-sm text-left">
+                About Us
+              </Link>
+              {companyLinks.slice(1).map((link, index) => (
                 <li key={index}>
                   <button className="text-muted-foreground hover:text-accent transition-colors text-sm text-left">
                     {link}
