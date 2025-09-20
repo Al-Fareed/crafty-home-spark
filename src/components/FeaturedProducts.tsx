@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -80,31 +81,33 @@ const FeaturedProducts = () => {
         {/* Products grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {products.map((product) => (
-            <Card key={product.id} className="group overflow-hidden hover:shadow-craft transition-shadow duration-300">
-              <div className="aspect-square overflow-hidden">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="p-4">
-                <h3 className="font-medium text-sm text-foreground mb-3 line-clamp-2 leading-tight">
-                  {product.name}
-                </h3>
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="text-lg font-bold text-foreground">₹{product.price.toLocaleString()}</span>
-                  <span className="text-sm text-muted-foreground line-through">₹{product.originalPrice.toLocaleString()}</span>
-                  <span className="text-xs text-accent font-medium">({product.discount})</span>
+            <Link key={product.id} to={`/product/${product.id}`} className="block">
+              <Card className="group overflow-hidden hover:shadow-craft transition-shadow duration-300">
+                <div className="aspect-square overflow-hidden">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
-                <Button 
-                  variant="secondary" 
-                  className="w-full rounded-full font-medium"
-                >
-                  Add To Cart
-                </Button>
-              </div>
-            </Card>
+                <div className="p-4">
+                  <h3 className="font-medium text-sm text-foreground mb-3 line-clamp-2 leading-tight">
+                    {product.name}
+                  </h3>
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="text-lg font-bold text-foreground">₹{product.price.toLocaleString()}</span>
+                    <span className="text-sm text-muted-foreground line-through">₹{product.originalPrice.toLocaleString()}</span>
+                    <span className="text-xs text-accent font-medium">({product.discount})</span>
+                  </div>
+                  <Button 
+                    variant="secondary" 
+                    className="w-full rounded-full font-medium"
+                  >
+                    View Details
+                  </Button>
+                </div>
+              </Card>
+            </Link>
           ))}
         </div>
       </div>
