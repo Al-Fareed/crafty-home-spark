@@ -2,6 +2,7 @@ import { Search, ShoppingCart, User, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -22,7 +23,7 @@ const Header = () => {
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
             <div className="w-8 h-8 bg-gradient-warm rounded-full flex items-center justify-center">
               <span className="text-primary font-bold text-sm">H</span>
             </div>
@@ -30,7 +31,7 @@ const Header = () => {
               <h1 className="text-xl font-bold text-primary">Hancraft</h1>
               <p className="text-xs text-muted-foreground">Crafting Timeless Stories</p>
             </div>
-          </div>
+          </Link>
 
           {/* Search bar - Hidden on mobile */}
           <div className="hidden md:flex flex-1 max-w-md mx-8">

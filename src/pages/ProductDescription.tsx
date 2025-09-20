@@ -33,8 +33,8 @@ const ProductDescription = () => {
   const product = productData[id || "1"] || productData["1"];
   
   const handleBuyNow = () => {
-    // Handle buy now functionality
-    console.log("Buy now clicked for product:", product.id);
+    // Navigate to checkout with product data
+    window.location.href = `/checkout?product=${product.id}`;
   };
 
   return (
