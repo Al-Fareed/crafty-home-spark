@@ -76,13 +76,11 @@ const Footer = () => {
                   Terms and Conditions
                 </Link>
               </li>
-              {supportLinks.slice(4).map((link, index) => (
-                <li key={index}>
-                  <button className="text-muted-foreground hover:text-accent transition-colors text-sm text-left">
-                    {link}
-                  </button>
-                </li>
-              ))}
+              <li>
+                <Link to="/faq" className="text-muted-foreground hover:text-accent transition-colors text-sm text-left">
+                  FAQ's
+                </Link>
+              </li>
             </ul>
           </div>
 
